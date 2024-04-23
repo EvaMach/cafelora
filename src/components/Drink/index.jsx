@@ -1,3 +1,4 @@
+import Layer from '../Layer';
 import './style.css';
 
 const Drink = ({id, name, ordered, image, layers}) => {
@@ -9,10 +10,7 @@ const Drink = ({id, name, ordered, image, layers}) => {
       </div>
       <div className="drink__info">
         <h3>{name}</h3>
-        <div className="layer">
-          <div className="layer__color" style={{ backgroundColor: '#613916' }}></div>
-          <div className="layer__label">espresso</div>
-        </div>
+        <Layer />
       </div>
     </div>
     <form className="drink__controls">
