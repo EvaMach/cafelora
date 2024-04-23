@@ -2,7 +2,7 @@ import './style.css';
 
 const Gallery = () => {
   return (
-    <section className="gallery">
+    <section id="gallery" className="gallery">
         <div className="container">
           <div className="gallery__content">
             <h2>Nově otevřeno!</h2>
