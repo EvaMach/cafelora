@@ -1,7 +1,7 @@
 import Drink from '../Drink';
 import './style.css';
 
-const Menu = () => {
+const Menu = ({drinks}) => {
   return (
     <section id="menu" className="menu">
     <div className="container">
@@ -10,7 +10,9 @@ const Menu = () => {
         Vyberte si z našeho interaktivního menu a nemusíte čekat na obsluhu
       </p>
       <div className="drinks-list">
-        <Drink />
+        {drinks.map((drink) => (
+          <Drink id={drink.id} image={drink.image} layers={drink.layers} name={drink.name} ordered={drink.ordered} />
+        ))}
       </div>
 
       <div className="order-detail">
