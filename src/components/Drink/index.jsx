@@ -10,7 +10,9 @@ const Drink = ({ id, name, ordered, image, layers }) => {
         </div>
         <div className="drink__info">
           <h3>{name}</h3>
-          <Layer />
+          {layers.map((layer) => (
+            <Layer key={layer.label} label={layer.label} color={layer.color} />
+          ))}
         </div>
       </div>
       <form data-id={id} className="drink__controls">
