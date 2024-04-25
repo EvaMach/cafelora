@@ -10,6 +10,7 @@ import Contact from '../components/Contact';
 
 const response = await fetch('http://localhost:4000/api/drinks');
 const { data: drinks } = await response.json();
+console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
@@ -43,7 +44,7 @@ document.querySelectorAll('.drink__controls').forEach((form) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify([{ op: 'replace', path: '/ordered', value: true }]),
+      body: JSON.stringify([{ op: 'replace', path: '/ordered', value: !drinks[id].ordered }]),
     });
     window.location.reload();
   });
