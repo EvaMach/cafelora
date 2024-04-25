@@ -10,7 +10,6 @@ import Contact from '../components/Contact';
 
 const response = await fetch('http://localhost:4000/api/drinks');
 const { data: drinks } = await response.json();
-console.log(drinks);
 
 document.querySelector('#root').innerHTML = render(
   <div className="page">
@@ -31,7 +30,6 @@ rolloutNav.addEventListener('click', () => {
 });
 
 document.querySelector('.nav-btn').addEventListener('click', () => {
-  console.log();
   rolloutNav.classList.toggle('nav-closed');
 });
 
