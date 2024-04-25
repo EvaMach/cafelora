@@ -5,7 +5,7 @@ const Order = ({ items }) => {
     <>
       {
         items.map((order) => (
-          <OrderItem name={order.name} image={order.image} />
+          <OrderItem key={order.name} name={order.name} image={order.image} />
         ))
       }
     </>
